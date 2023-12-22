@@ -1,0 +1,8 @@
+node_modules
+components
+# src
+
+# .gitignore
+# gulpfile.js
+# package-lock.json
+# package.json
