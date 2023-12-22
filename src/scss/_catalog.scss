@@ -1,0 +1,132 @@
+.catalog {
+    margin: 100px 0 50px;
+    // .catalog__wrapper
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        justify-content: start;
+    }
+
+    // .catalog__link
+
+    &__link {
+        color: #5de8dc;
+        font-size: 30px;
+        font-weight: 400;
+        text-decoration: underline;
+        line-height: 42px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: max-content;
+        font-family: "Gilroy";
+    }
+
+    // .catalog__card
+
+    &__card {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        background-color: #161b1b;
+        padding: 30px;
+        border-radius: 20px;
+        @media (max-width: 992px) {
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+        }
+        @media (max-width: 480px) {
+            padding: 10px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 200px;
+            left: 0px;
+            background-image: url(./assets/svg/x.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            z-index: -99;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 200px;
+            right: 0px;
+            background-image: url(./assets/svg/x.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            z-index: -99;
+        }
+    }
+
+    // .catalog__img
+
+    &__img {
+        width: 100%;
+    }
+
+    // .catalog__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    // .catalog__title
+
+    &__title {
+        color: white;
+        font-size: 70px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    // .catalog__card-text
+
+    &__card-text {
+        color: #b5b5b5;
+        font-size: clamp(1.125rem, 1.014rem + 0.56vw, 1.5rem);
+        font-family: "Gilroy", sans-serif;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    // .catalog__price
+
+    &__price {
+        color: white;
+        font-size: clamp(1.563rem, 1.285rem + 1.39vw, 2.5rem);
+        font-weight: 600;
+        line-height: 56px;
+        font-family: "Gilroy", sans-serif;
+    }
+
+    // .catalog__btns
+
+    &__btns {
+        background-color: #5de8dc;
+        padding: 15px 30px;
+        width: max-content;
+    }
+
+    // .catalog__btn
+
+    &__btn {
+        color: #031413;
+        font-size: 22.08px;
+        font-weight: 400;
+        line-height: 22.08px;
+        letter-spacing: 1.55px;
+    }
+}
